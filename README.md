@@ -246,12 +246,6 @@ Capacity: 8 MB
 - 沒有示波器或邏輯分析儀數據。9 MHz 是 RCC runtime calculation；實體 UART、JEDEC、read/write/erase、benchmark 與 recovery 提供系統級功能證據。
 - 六針 W25Q64 module 未暴露 WP#/HOLD#；完整 program/erase 測試證明目前組裝中兩腳保持功能性 deasserted，但內部 pull-up 與電源類比特性未量測。
 
-## 面試時如何介紹
-
-> 我在 STM32F103 bare-metal 專案中，從 SPI NOR driver 開始建立一套 10 Hz sensor logger。核心問題是 NOR Flash 的 erase granularity、有限壽命和斷電一致性。我用固定格式與 CRC 保護 records，以 2046-sector circular buffer 和 round-robin allocator 分散磨耗，再用 A/B metadata、generation 和 boot-time tail replay 恢復 write pointer。最後用 host fault model、五個 reset injection boundaries 和真正斷電測試驗證 recovery，並量得 4 KiB read 89 KiB/s、write 36 KiB/s、sector erase + verify 90 ms。
-
-更完整的 API、資料格式、錯誤模型及逐項驗收證據請見 [Detailed Implementation and Validation](docs/DETAILED_VALIDATION.md)。
-
 ## Repository Notes
 
 目前正式版本為 [`v1.0.0`](CHANGELOG.md)。`Objects/`、`Listings/`、`build/` 與 Keil 使用者暫存檔已由 `.gitignore` 排除；GitHub Actions 會在 push、tag 與 pull request 執行 host regression。

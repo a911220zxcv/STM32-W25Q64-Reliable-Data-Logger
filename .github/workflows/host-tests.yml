@@ -12,10 +12,16 @@ permissions:
 
 jobs:
   host-regression:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
+
+      - name: Show toolchain versions
+        shell: pwsh
+        run: |
+          gcc --version
+          $PSVersionTable.PSVersion
 
       - name: Build and run host models
         shell: pwsh

@@ -1,0 +1,22 @@
+name: Host Tests
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  host-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Build and run host models
+        shell: pwsh
+        run: ./tests/run_host_tests.ps1

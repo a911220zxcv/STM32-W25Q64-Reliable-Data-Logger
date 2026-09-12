@@ -9,6 +9,7 @@
 | Sensor | MPU6050，I2C2，10 Hz sampling |
 | Interface | USART1 CLI，115200 8-N-1 |
 | Release | v1.0.0（2026-09-13） |
+| License | MIT（project-specific code）；vendor code 保留原始 notices |
 | Capacity | 298,716 records，約 8.3 小時 @ 10 Hz |
 | 狀態 | Phase 1–8、五個 reset-injection points、正式版斷電 Demo 全部通過 |
 
@@ -255,4 +256,4 @@ Capacity: 8 MB
 
 目前正式版本為 [`v1.0.0`](CHANGELOG.md)。`Objects/`、`Listings/`、`build/` 與 Keil 使用者暫存檔已由 `.gitignore` 排除；GitHub Actions 會在 push、tag 與 pull request 執行 host regression。
 
-專案自有程式碼尚未選擇 open-source license；公開瀏覽不等於授權重用。邀請外部重用或貢獻前應先選擇 license。ST、Arm 與既有 vendor code 的來源和保留事項見 [Third-Party Notices](THIRD_PARTY_NOTICES.md)。
+本專案自有程式碼與文件採用 [MIT License](LICENSE)。`Library/`、`Start/` 及其他保留原始 copyright/license notice 的 vendor files 繼續適用各自條款；來源和例外範圍見 [Third-Party Notices](THIRD_PARTY_NOTICES.md)。

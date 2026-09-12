@@ -21,6 +21,7 @@ First production-ready portfolio release.
 - Five debug-only reset injection points at durability boundaries.
 - GitHub Actions workflow for host regression tests.
 - Trimmed vendored SPL and startup sources to the modules used by this target.
+- MIT License for project-specific code and documentation, with vendor-code exceptions documented separately.
 
 ### Validated
 

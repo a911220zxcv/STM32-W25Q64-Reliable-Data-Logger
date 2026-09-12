@@ -16,4 +16,4 @@ These files retain their original copyright and notice blocks. Their use and red
 
 The data logger code under `User/`, the STM32 hardware ports added under `System/`, the host tests under `tests/`, and the project documentation are separate from the vendor support code above.
 
-No top-level open-source license has been selected for the project-specific code. Public availability alone does not grant reuse rights. A license should be selected before inviting external reuse or contributions.
+Except for files that retain a different copyright or license notice, the project-specific code and documentation are licensed under the repository's top-level MIT License. The MIT License does not replace or override the notices and terms retained in third-party files.
